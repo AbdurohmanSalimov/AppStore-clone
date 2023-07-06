@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		082B933F2A56CE17006002E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B933E2A56CE17006002E3 /* AppDelegate.swift */; };
+		082B93482A56CE17006002E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082B93472A56CE17006002E3 /* Assets.xcassets */; };
+		082B934B2A56CE17006002E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082B93492A56CE17006002E3 /* LaunchScreen.storyboard */; };
+		082B93532A56D370006002E3 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93522A56D370006002E3 /* Tabbar.swift */; };
+		082B93552A56D70B006002E3 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93542A56D70B006002E3 /* TodayVC.swift */; };
+		082B93572A56D718006002E3 /* GamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93562A56D718006002E3 /* GamesVC.swift */; };
+		082B93592A56D722006002E3 /* AppsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93582A56D722006002E3 /* AppsUI.swift */; };
+		082B935B2A56D72C006002E3 /* ArcadeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B935A2A56D72C006002E3 /* ArcadeVC.swift */; };
+		082B935D2A56D738006002E3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B935C2A56D738006002E3 /* SearchVC.swift */; };
+		082B93632A56DF34006002E3 /* AppsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B935E2A56DF34006002E3 /* AppsContract.swift */; };
+		082B93642A56DF34006002E3 /* AppsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B935F2A56DF34006002E3 /* AppsPresenter.swift */; };
+		082B93652A56DF34006002E3 /* AppsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93602A56DF34006002E3 /* AppsRouter.swift */; };
+		082B93662A56DF34006002E3 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93612A56DF34006002E3 /* AppsViewController.swift */; };
+		082B93672A56DF34006002E3 /* AppsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93622A56DF34006002E3 /* AppsInteractor.swift */; };
+		E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.release.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.release.xcconfig"; sourceTree = "<group>"; };
+		082B933B2A56CE17006002E3 /* AppStore clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		082B933E2A56CE17006002E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		082B93472A56CE17006002E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		082B934A2A56CE17006002E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		082B934C2A56CE17006002E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		082B93522A56D370006002E3 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		082B93542A56D70B006002E3 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		082B93562A56D718006002E3 /* GamesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesVC.swift; sourceTree = "<group>"; };
+		082B93582A56D722006002E3 /* AppsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsUI.swift; sourceTree = "<group>"; };
+		082B935A2A56D72C006002E3 /* ArcadeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeVC.swift; sourceTree = "<group>"; };
+		082B935C2A56D738006002E3 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		082B935E2A56DF34006002E3 /* AppsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsContract.swift; sourceTree = "<group>"; };
+		082B935F2A56DF34006002E3 /* AppsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPresenter.swift; sourceTree = "<group>"; };
+		082B93602A56DF34006002E3 /* AppsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsRouter.swift; sourceTree = "<group>"; };
+		082B93612A56DF34006002E3 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		082B93622A56DF34006002E3 /* AppsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsInteractor.swift; sourceTree = "<group>"; };
+		3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_clone__task_for_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		082B93382A56CE17006002E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		082B93322A56CE17006002E3 = {
+			isa = PBXGroup;
+			children = (
+				082B933D2A56CE17006002E3 /* AppStore clone- task for SmartBank */,
+				082B933C2A56CE17006002E3 /* Products */,
+				1EE7012E270FB8C5B49950A4 /* Pods */,
+				78D7331A14271D0695517193 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		082B933C2A56CE17006002E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				082B933B2A56CE17006002E3 /* AppStore clone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		082B933D2A56CE17006002E3 /* AppStore clone- task for SmartBank */ = {
+			isa = PBXGroup;
+			children = (
+				082B93682A56DF4C006002E3 /* Classes */,
+				082B936A2A56DF5C006002E3 /* SupportingFiles */,
+				082B93692A56DF52006002E3 /* Resources */,
+			);
+			path = "AppStore clone- task for SmartBank";
+			sourceTree = "<group>";
+		};
+		082B93682A56DF4C006002E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				082B93712A56DFFA006002E3 /* App */,
+				082B936B2A56DF6C006002E3 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		082B93692A56DF52006002E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		082B936A2A56DF5C006002E3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				082B93492A56CE17006002E3 /* LaunchScreen.storyboard */,
+				082B93472A56CE17006002E3 /* Assets.xcassets */,
+				082B934C2A56CE17006002E3 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		082B936B2A56DF6C006002E3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				082B936C2A56DF76006002E3 /* Today */,
+				082B936D2A56DF85006002E3 /* Games */,
+				082B936E2A56DF8D006002E3 /* Apps */,
+				082B936F2A56DF91006002E3 /* Arcade */,
+				082B93702A56DF97006002E3 /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		082B936C2A56DF76006002E3 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				082B93542A56D70B006002E3 /* TodayVC.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		082B936D2A56DF85006002E3 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				082B93562A56D718006002E3 /* GamesVC.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		082B936E2A56DF8D006002E3 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				082B93582A56D722006002E3 /* AppsUI.swift */,
+				082B935E2A56DF34006002E3 /* AppsContract.swift */,
+				082B935F2A56DF34006002E3 /* AppsPresenter.swift */,
+				082B93602A56DF34006002E3 /* AppsRouter.swift */,
+				082B93612A56DF34006002E3 /* AppsViewController.swift */,
+				082B93622A56DF34006002E3 /* AppsInteractor.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		082B936F2A56DF91006002E3 /* Arcade */ = {
+			isa = PBXGroup;
+			children = (
+				082B935A2A56D72C006002E3 /* ArcadeVC.swift */,
+			);
+			path = Arcade;
+			sourceTree = "<group>";
+		};
+		082B93702A56DF97006002E3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				082B935C2A56D738006002E3 /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		082B93712A56DFFA006002E3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				082B933E2A56CE17006002E3 /* AppDelegate.swift */,
+				082B93522A56D370006002E3 /* Tabbar.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1EE7012E270FB8C5B49950A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */,
+				034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78D7331A14271D0695517193 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		082B933A2A56CE17006002E3 /* AppStore clone- task for SmartBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 082B934F2A56CE17006002E3 /* Build configuration list for PBXNativeTarget "AppStore clone- task for SmartBank" */;
+			buildPhases = (
+				7713773444FCAC55EEECA928 /* [CP] Check Pods Manifest.lock */,
+				082B93372A56CE17006002E3 /* Sources */,
+				082B93382A56CE17006002E3 /* Frameworks */,
+				082B93392A56CE17006002E3 /* Resources */,
+				61FDCC84CEEED6C59B383A48 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppStore clone- task for SmartBank";
+			productName = "AppStore clone- task for SmartBank";
+			productReference = 082B933B2A56CE17006002E3 /* AppStore clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		082B93332A56CE17006002E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					082B933A2A56CE17006002E3 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 082B93362A56CE17006002E3 /* Build configuration list for PBXProject "AppStore clone- task for SmartBank" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 082B93322A56CE17006002E3;
+			productRefGroup = 082B933C2A56CE17006002E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				082B933A2A56CE17006002E3 /* AppStore clone- task for SmartBank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		082B93392A56CE17006002E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				082B934B2A56CE17006002E3 /* LaunchScreen.storyboard in Resources */,
+				082B93482A56CE17006002E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61FDCC84CEEED6C59B383A48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7713773444FCAC55EEECA928 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppStore clone- task for SmartBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		082B93372A56CE17006002E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				082B93552A56D70B006002E3 /* TodayVC.swift in Sources */,
+				082B93642A56DF34006002E3 /* AppsPresenter.swift in Sources */,
+				082B93652A56DF34006002E3 /* AppsRouter.swift in Sources */,
+				082B933F2A56CE17006002E3 /* AppDelegate.swift in Sources */,
+				082B93572A56D718006002E3 /* GamesVC.swift in Sources */,
+				082B93662A56DF34006002E3 /* AppsViewController.swift in Sources */,
+				082B93592A56D722006002E3 /* AppsUI.swift in Sources */,
+				082B935B2A56D72C006002E3 /* ArcadeVC.swift in Sources */,
+				082B93532A56D370006002E3 /* Tabbar.swift in Sources */,
+				082B935D2A56D738006002E3 /* SearchVC.swift in Sources */,
+				082B93672A56DF34006002E3 /* AppsInteractor.swift in Sources */,
+				082B93632A56DF34006002E3 /* AppsContract.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		082B93492A56CE17006002E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				082B934A2A56CE17006002E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		082B934D2A56CE17006002E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		082B934E2A56CE17006002E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		082B93502A56CE17006002E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AppStore clone- task for SmartBank/SupportingFiles/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sadsadasd.AppStore-clone--task-for-SmartBank";
+				PRODUCT_NAME = "AppStore clone";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		082B93512A56CE17006002E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AppStore clone- task for SmartBank/SupportingFiles/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sadsadasd.AppStore-clone--task-for-SmartBank";
+				PRODUCT_NAME = "AppStore clone";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		082B93362A56CE17006002E3 /* Build configuration list for PBXProject "AppStore clone- task for SmartBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				082B934D2A56CE17006002E3 /* Debug */,
+				082B934E2A56CE17006002E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		082B934F2A56CE17006002E3 /* Build configuration list for PBXNativeTarget "AppStore clone- task for SmartBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				082B93502A56CE17006002E3 /* Debug */,
+				082B93512A56CE17006002E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 082B93332A56CE17006002E3 /* Project object */;
+}
