@@ -1,10 +1,10 @@
 //
-//  AppsContract.swift
+//  AppsVC.swift
 //  AppStore clone- task for SmartBank
 //
-//  Created by Avazbek on 06/07/23.
-//  Copyright © 2023 Olimov Avazbek Developer. All rights reserved.
+//  Created by A. Salimov on 06/07/23.
 //
+
 
 import Foundation
 import UIKit
@@ -15,6 +15,8 @@ protocol PresenterToViewAppsProtocol: AnyObject {
     func  createUIElements()
     func handleViewWillAppear()
     func handleViewWillDisappear()
+    
+   
 }
 
 
@@ -28,6 +30,9 @@ protocol ViewToPresenterAppsProtocol: AnyObject {
     func viewDidLoad()
     func viewWillAppear()
     func viewWillDisappear()
+    
+    var feturedDataResponse: [Section] { get set }
+    var appsDataResponse: [Section] { get set }
 }
 
 

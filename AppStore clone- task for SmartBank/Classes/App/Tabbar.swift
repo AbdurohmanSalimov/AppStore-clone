@@ -64,11 +64,11 @@ class TabBar: UITabBarController, UITabBarControllerDelegate {
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
         UINavigationBar.appearance().tintColor = .blue
-        navController.navigationBar.prefersLargeTitles = false
+        navController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationItem.title = title
         return navController
     }
     
-    
+  
     
 }

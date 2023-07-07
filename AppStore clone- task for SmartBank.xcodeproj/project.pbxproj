@@ -21,6 +21,15 @@
 		082B93652A56DF34006002E3 /* AppsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93602A56DF34006002E3 /* AppsRouter.swift */; };
 		082B93662A56DF34006002E3 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93612A56DF34006002E3 /* AppsViewController.swift */; };
 		082B93672A56DF34006002E3 /* AppsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93622A56DF34006002E3 /* AppsInteractor.swift */; };
+		082B93742A570C0E006002E3 /* FeaturedCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93732A570C0E006002E3 /* FeaturedCVC.swift */; };
+		082B93762A571B9A006002E3 /* DM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93752A571B9A006002E3 /* DM.swift */; };
+		082B93782A571FF5006002E3 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93772A571FF5006002E3 /* ResponseData.swift */; };
+		082B937B2A57840E006002E3 /* ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B937A2A57840E006002E3 /* ClassIdentifiable.swift */; };
+		082B937D2A578439006002E3 /* UITableView+ ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B937C2A578439006002E3 /* UITableView+ ClassIdentifiable.swift */; };
+		082B937F2A57845A006002E3 /* UICollection+ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B937E2A57845A006002E3 /* UICollection+ClassIdentifiable.swift */; };
+		082B93812A579992006002E3 /* AppsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93802A579992006002E3 /* AppsCVC.swift */; };
+		082B93832A57CE43006002E3 /* TopCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93822A57CE43006002E3 /* TopCVC.swift */; };
+		082B93852A57CEEB006002E3 /* AppsHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */; };
 		E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +51,15 @@
 		082B93602A56DF34006002E3 /* AppsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsRouter.swift; sourceTree = "<group>"; };
 		082B93612A56DF34006002E3 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		082B93622A56DF34006002E3 /* AppsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsInteractor.swift; sourceTree = "<group>"; };
+		082B93732A570C0E006002E3 /* FeaturedCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCVC.swift; sourceTree = "<group>"; };
+		082B93752A571B9A006002E3 /* DM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DM.swift; path = "AppStore clone- task for SmartBank/Classes/Modules/Apps/CVC/DM.swift"; sourceTree = SOURCE_ROOT; };
+		082B93772A571FF5006002E3 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResponseData.swift; path = "AppStore clone- task for SmartBank/Classes/Modules/Apps/CVC/ResponseData.swift"; sourceTree = SOURCE_ROOT; };
+		082B937A2A57840E006002E3 /* ClassIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassIdentifiable.swift; sourceTree = "<group>"; };
+		082B937C2A578439006002E3 /* UITableView+ ClassIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ ClassIdentifiable.swift"; sourceTree = "<group>"; };
+		082B937E2A57845A006002E3 /* UICollection+ClassIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollection+ClassIdentifiable.swift"; sourceTree = "<group>"; };
+		082B93802A579992006002E3 /* AppsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCVC.swift; sourceTree = "<group>"; };
+		082B93822A57CE43006002E3 /* TopCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCVC.swift; sourceTree = "<group>"; };
+		082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCVC.swift; sourceTree = "<group>"; };
 		3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_clone__task_for_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +116,9 @@
 		082B93692A56DF52006002E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				082B93792A5783EC006002E3 /* Extentions */,
+				082B93752A571B9A006002E3 /* DM.swift */,
+				082B93772A571FF5006002E3 /* ResponseData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -143,12 +164,13 @@
 		082B936E2A56DF8D006002E3 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				082B93722A570BF5006002E3 /* CVC */,
 				082B93582A56D722006002E3 /* AppsUI.swift */,
-				082B935E2A56DF34006002E3 /* AppsContract.swift */,
-				082B935F2A56DF34006002E3 /* AppsPresenter.swift */,
-				082B93602A56DF34006002E3 /* AppsRouter.swift */,
 				082B93612A56DF34006002E3 /* AppsViewController.swift */,
+				082B935F2A56DF34006002E3 /* AppsPresenter.swift */,
 				082B93622A56DF34006002E3 /* AppsInteractor.swift */,
+				082B93602A56DF34006002E3 /* AppsRouter.swift */,
+				082B935E2A56DF34006002E3 /* AppsContract.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -178,13 +200,33 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		082B93722A570BF5006002E3 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				082B93822A57CE43006002E3 /* TopCVC.swift */,
+				082B93732A570C0E006002E3 /* FeaturedCVC.swift */,
+				082B93802A579992006002E3 /* AppsCVC.swift */,
+				082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		082B93792A5783EC006002E3 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				082B937A2A57840E006002E3 /* ClassIdentifiable.swift */,
+				082B937C2A578439006002E3 /* UITableView+ ClassIdentifiable.swift */,
+				082B937E2A57845A006002E3 /* UICollection+ClassIdentifiable.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		1EE7012E270FB8C5B49950A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */,
 				034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -310,17 +352,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				082B93762A571B9A006002E3 /* DM.swift in Sources */,
+				082B93852A57CEEB006002E3 /* AppsHeaderCVC.swift in Sources */,
 				082B93552A56D70B006002E3 /* TodayVC.swift in Sources */,
 				082B93642A56DF34006002E3 /* AppsPresenter.swift in Sources */,
 				082B93652A56DF34006002E3 /* AppsRouter.swift in Sources */,
 				082B933F2A56CE17006002E3 /* AppDelegate.swift in Sources */,
 				082B93572A56D718006002E3 /* GamesVC.swift in Sources */,
 				082B93662A56DF34006002E3 /* AppsViewController.swift in Sources */,
+				082B93782A571FF5006002E3 /* ResponseData.swift in Sources */,
+				082B937B2A57840E006002E3 /* ClassIdentifiable.swift in Sources */,
 				082B93592A56D722006002E3 /* AppsUI.swift in Sources */,
+				082B937F2A57845A006002E3 /* UICollection+ClassIdentifiable.swift in Sources */,
+				082B93742A570C0E006002E3 /* FeaturedCVC.swift in Sources */,
+				082B937D2A578439006002E3 /* UITableView+ ClassIdentifiable.swift in Sources */,
 				082B935B2A56D72C006002E3 /* ArcadeVC.swift in Sources */,
 				082B93532A56D370006002E3 /* Tabbar.swift in Sources */,
+				082B93812A579992006002E3 /* AppsCVC.swift in Sources */,
 				082B935D2A56D738006002E3 /* SearchVC.swift in Sources */,
 				082B93672A56DF34006002E3 /* AppsInteractor.swift in Sources */,
+				082B93832A57CE43006002E3 /* TopCVC.swift in Sources */,
 				082B93632A56DF34006002E3 /* AppsContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

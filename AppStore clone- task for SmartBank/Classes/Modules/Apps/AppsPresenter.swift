@@ -1,9 +1,8 @@
 //
-//  AppsPresenter.swift
+//  AppsVC.swift
 //  AppStore clone- task for SmartBank
 //
-//  Created by Avazbek on 06/07/23.
-//  Copyright © 2023 Olimov Avazbek Developer. All rights reserved.
+//  Created by A. Salimov on 06/07/23.
 //
 
 import Foundation
@@ -14,6 +13,9 @@ class AppsPresenter: ViewToPresenterAppsProtocol {
     weak var view: PresenterToViewAppsProtocol?
     var interactor: PresenterToInteractorAppsProtocol?
     var router: PresenterToRouterAppsProtocol?
+    var feturedDataResponse: [Section] = Network.shared.getFeaturedResponseData()
+    var appsDataResponse: [Section] = Network.shared.getAppsResponseData()
+    
     
     // MARK: Inputs from view
     func viewDidLoad() {
