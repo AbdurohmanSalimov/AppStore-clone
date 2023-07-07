@@ -31,11 +31,10 @@
 		082B93832A57CE43006002E3 /* TopCategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */; };
 		082B93852A57CEEB006002E3 /* AppsHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */; };
 		082B93892A586256006002E3 /* QuickLinksCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93882A586256006002E3 /* QuickLinksCVC.swift */; };
-		E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */; };
+		083A0504F8B824901C74B69E /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4AAED932C0255ED4E1F8F3 /* Pods_AppStore_clone__task_for_SmartBank.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.release.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.release.xcconfig"; sourceTree = "<group>"; };
 		082B933B2A56CE17006002E3 /* AppStore clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		082B933E2A56CE17006002E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		082B93472A56CE17006002E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,8 +61,9 @@
 		082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesCVC.swift; sourceTree = "<group>"; };
 		082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCVC.swift; sourceTree = "<group>"; };
 		082B93882A586256006002E3 /* QuickLinksCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLinksCVC.swift; sourceTree = "<group>"; };
-		3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_clone__task_for_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
+		BF74686193E954F0A937CE7C /* Pods-AppStore clone- task for SmartBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.release.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.release.xcconfig"; sourceTree = "<group>"; };
+		D998211D59E7DA1C3FC8418A /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
+		EE4AAED932C0255ED4E1F8F3 /* Pods_AppStore_clone__task_for_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_clone__task_for_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */,
+				083A0504F8B824901C74B69E /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 				082B933D2A56CE17006002E3 /* AppStore clone- task for SmartBank */,
 				082B933C2A56CE17006002E3 /* Products */,
 				1EE7012E270FB8C5B49950A4 /* Pods */,
-				78D7331A14271D0695517193 /* Frameworks */,
+				EC4E2EC33F33C8C8E42521A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,16 +227,16 @@
 		1EE7012E270FB8C5B49950A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */,
-				034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */,
+				D998211D59E7DA1C3FC8418A /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */,
+				BF74686193E954F0A937CE7C /* Pods-AppStore clone- task for SmartBank.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		78D7331A14271D0695517193 /* Frameworks */ = {
+		EC4E2EC33F33C8C8E42521A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */,
+				EE4AAED932C0255ED4E1F8F3 /* Pods_AppStore_clone__task_for_SmartBank.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,11 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 082B934F2A56CE17006002E3 /* Build configuration list for PBXNativeTarget "AppStore clone- task for SmartBank" */;
 			buildPhases = (
-				7713773444FCAC55EEECA928 /* [CP] Check Pods Manifest.lock */,
+				108855067CDE34DA52F0C4C0 /* [CP] Check Pods Manifest.lock */,
 				082B93372A56CE17006002E3 /* Sources */,
 				082B93382A56CE17006002E3 /* Frameworks */,
 				082B93392A56CE17006002E3 /* Resources */,
-				61FDCC84CEEED6C59B383A48 /* [CP] Embed Pods Frameworks */,
+				315DF0B65BDCB0257FC9DA88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,24 +309,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		61FDCC84CEEED6C59B383A48 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7713773444FCAC55EEECA928 /* [CP] Check Pods Manifest.lock */ = {
+		108855067CDE34DA52F0C4C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,6 +329,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		315DF0B65BDCB0257FC9DA88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -510,7 +510,7 @@
 		};
 		082B93502A56CE17006002E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */;
+			baseConfigurationReference = D998211D59E7DA1C3FC8418A /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -542,7 +542,7 @@
 		};
 		082B93512A56CE17006002E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 034CA8F399754A3F29A7F4A8 /* Pods-AppStore clone- task for SmartBank.release.xcconfig */;
+			baseConfigurationReference = BF74686193E954F0A937CE7C /* Pods-AppStore clone- task for SmartBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
