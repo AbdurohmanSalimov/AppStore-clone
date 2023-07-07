@@ -31,11 +31,19 @@ class AppsViewController: UIViewController {
     // MARK: - Properties
     var presenter: ViewToPresenterAppsProtocol?
     var collectionView: UICollectionView!
+    var refreshControl: UIRefreshControl!
     let imageViewM = UIImageView(image: UIImage(named: "Salimov2"))
+    var appCateforiesSection: Int?
     
+    // MARK: - Actions
+    @objc func refresh() {
+        presenter?.refresh()
+    }
 }
 
 extension AppsViewController: PresenterToViewAppsProtocol{
+   
+    
     // TODO: Implement View Output Methods
     
     func handleViewWillAppear() {
@@ -47,10 +55,22 @@ extension AppsViewController: PresenterToViewAppsProtocol{
 
 // MARK: - UI Setup
 extension AppsViewController {
+    
+    func updateUI() {
+        self.appCateforiesSection = (presenter?.lastSection ?? 0) - 1
+        self.collectionView.reloadData()
+        self.refreshControl.endRefreshing()
+        
+    }
+    
     func createUIElements() {
         overrideUserInterfaceStyle = .light
         self.collectionView = self.createCollectionView()
+        self.refreshControl = self.create_refreshController()
         self.addSubviews()
+        self.refreshControl.beginRefreshing()
+        print("🦷 create UI elements",appCateforiesSection)
+        
     }
 }
 
@@ -61,21 +81,24 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
             guard let height = navigationController?.navigationBar.frame.height else { return }
             moveAndResizeImage(for: height)
-        
+        print("🦷 App categories sections",presenter?.getTotalNumberOfSection())
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 30
+        return presenter?.getTotalNumberOfSection() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        appCateforiesSection = (presenter?.lastSection ?? 0) - 1
         switch section {
         case 0:
-            return presenter?.feturedDataResponse.count ?? 0
-        case 1:
-            return presenter?.appsDataResponse.count ?? 0 // default is 4 in presenter func
+            return presenter?.getFeaturedCategoryNumberOfItems() ?? 0
+            
+        case appCateforiesSection:
+            print("🦷 number of items",appCateforiesSection)
+            return presenter?.getAppCategoryNumberOfItems() ?? 0
         default:
-            return 4
+            return presenter?.getAppNumberOfItems(atSection: section) ?? 0
         }
     }
     
@@ -83,31 +106,24 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(withCellType: FeaturedCVC.self, for: indexPath)
-            cell.configure(data: (presenter?.feturedDataResponse[indexPath.row])!)
+            cell.configure(data: (presenter?.feturedDataResponse?[indexPath.row])!)
             
             return cell
             
-        case 1:
-            let cell = collectionView.dequeueReusableCell(withCellType: AppsCVC.self, for: indexPath)
-            
-            cell.configure(data: (presenter?.appsDataResponse[indexPath.row])!)
+        case appCateforiesSection:
+            print("🦷 case celll for item",appCateforiesSection)
+            let cell = collectionView.dequeueReusableCell(withCellType: TopCategoriesCVC.self, for: indexPath)
+            if let dataSafe = presenter?.appCategories?[indexPath.row] {
+            cell.configure(data: dataSafe)
+            }
+
             return cell
+        
         default:
-            let cell = collectionView.dequeueReusableCell(withCellType: FeaturedCVC.self, for: indexPath)
-//            switch indexPath.item {
-//            case 0:
-//                cell.titleLabel.text = "Umra qo’llanmasi"
-//                cell.photoImageView.image = UIImage(named: "qo'llanma_img")
-//            case 1:
-//                cell.titleLabel.text = "Umra duolari"
-//                cell.photoImageView.image = UIImage(named: "duolar_img")
-//            case 2:
-//                cell.titleLabel.text = "Safarga tayorgarlik"
-//                cell.photoImageView.image = UIImage(named: "safar_img")
-//            default:
-//                cell.titleLabel.text = "Islom tarixiga oid joylar"
-//                cell.photoImageView.image = UIImage(named: "tarix_img")
-//            }
+            let cell = collectionView.dequeueReusableCell(withCellType: AppsCVC.self, for: indexPath)
+            if let dataSafe = presenter?.appsDataResponse?[indexPath.section - 1].apps[indexPath.row] {
+                cell.configure(data: dataSafe)
+            }
             return cell
         }
     }
@@ -124,35 +140,41 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 let header = collectionView.dequeueReusableView(ofKind: .header,
                                                                 withViewType: AppsReusableHeaderView.self,
                                                                 for:indexPath)
-                header.label.text = "This Week`s Favourites"
-                header.seeMoreButton.isHidden = false
+                header.label.text = presenter?.appsDataResponse?[indexPath.section - 1].title
                 header.seeMoreTapped = { [weak self] in
-//                    self?.presenter?.didSelectMore()
+                    self?.presenter?.seeAll(at: indexPath)
+                }
+                return header
+                
+            case appCateforiesSection:
+                print("🦷 header suplimentory-",appCateforiesSection)
+                let header = collectionView.dequeueReusableView(ofKind: .header,
+                                                                withViewType: AppsReusableHeaderView.self,
+                                                                for:indexPath)
+                header.label.text = "Top Categories"
+                header.seeMoreTapped = { [weak self] in
+                    self?.presenter?.seeAll(at: indexPath)
                 }
                 return header
             default:
                 let header = collectionView.dequeueReusableView(ofKind: .header,
-                                                                withViewType: TopReusableHeaderView.self,
-                                                                for: indexPath)
-                header.label.text = "Qo’llanma"
-                header.userBtn.isHidden = true
+                                                                withViewType: AppsReusableHeaderView.self,
+                                                                for:indexPath)
+                header.label.text = presenter?.appsDataResponse?[indexPath.section - 1].title
+                header.seeMoreTapped = { [weak self] in
+                    self?.presenter?.seeAll(at: indexPath)
+                    
+                }
                 return header
             }
-        } else {
-            return UICollectionReusableView()
         }
+        return UICollectionReusableView()
+        
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        switch indexPath.section {
-//        case 0:
-//            print("")
-//        case 1:
-//            presenter?.didSelectRowAt(indexPath: indexPath)
-//        default:
-//            presenter?.didSelectRowAt(indexPath: indexPath)
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectItem(at: indexPath)
+    }
     
 }
 

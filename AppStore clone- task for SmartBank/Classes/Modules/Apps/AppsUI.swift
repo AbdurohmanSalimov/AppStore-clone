@@ -22,12 +22,20 @@ extension AppsViewController {
         
         collectionView.register(cellType: FeaturedCVC.self)
         collectionView.register(cellType: AppsCVC.self)
-//        collectionView.register(cellType: HomeGuideCVC.self)
+        collectionView.register(cellType: TopCategoriesCVC.self)
         
         collectionView.registerView(ofKind: .header, viewType: AppsReusableHeaderView.self)
-        collectionView.registerView(ofKind: .header, viewType: TopReusableHeaderView.self)
+//        collectionView.registerView(ofKind: .header, viewType: TopReusableHeaderView.self)
         
         return collectionView
+    }
+    
+    func create_refreshController() -> UIRefreshControl {
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        refreshControl.beginRefreshing()
+        return refreshControl
     }
 
 }
@@ -36,6 +44,7 @@ extension AppsViewController {
 extension AppsViewController {
     func addSubviews() {
         self.view.addSubview(self.collectionView)
+        self.collectionView.addSubview(self.refreshControl)
     }
 
     
@@ -49,10 +58,12 @@ extension AppsViewController {
             switch section {
             case 0:
                 return self?.createFeaturedLayout()
-            case 1:
-                return self?.createAppsLayout()
+                
+            case self?.appCateforiesSection:
+                return self?.createAppsCollectionLayout()
+            
             default:
-                return self?.createFeaturedLayout()
+                return self?.createAppsLayout()
             }
         }
         return layout
@@ -60,7 +71,7 @@ extension AppsViewController {
     
     
     private func createFeaturedLayout() -> NSCollectionLayoutSection {
-        let heightCell: CGFloat = 370
+        let heightCell: CGFloat = UIScreen.main.bounds.height / 2.4
         let widthCell: CGFloat = UIScreen.main.bounds.width - 16
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
@@ -80,13 +91,13 @@ extension AppsViewController {
     }
     
     private func createAppsLayout() -> NSCollectionLayoutSection {
-        let heightCell: CGFloat = 370
+        let heightCell: CGFloat = UIScreen.main.bounds.height / 2.4
         let widthCell: CGFloat = UIScreen.main.bounds.width - 28
-        let heightHeaderView: CGFloat = 80
+        let heightHeaderView: CGFloat = 100
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1.0/3.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = .init(top: 8, leading: 8, bottom: .zero, trailing: 0)
+        item.contentInsets = .init(top: 8, leading: 8, bottom: .zero, trailing: 8)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 3) // <<<===
@@ -99,6 +110,40 @@ extension AppsViewController {
         section.interGroupSpacing = 8
         section.orthogonalScrollingBehavior = .groupPaging
         
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(heightHeaderView)
+        )
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.SupplymentaryViewKind.header.identifier,
+            alignment: .topLeading
+        )
+
+        section.boundarySupplementaryItems = [header]
+        section.supplementariesFollowContentInsets = false
+        
+        return section
+    }
+    
+    private func createAppsCollectionLayout() -> NSCollectionLayoutSection {
+
+        let heightHeaderView: CGFloat = 100
+        
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(50))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+       
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .absolute(heightHeaderView)
@@ -136,6 +181,7 @@ extension AppsViewController {
         static let NavBarHeightLargeState: CGFloat = 96.5
     }
      func setupUI() {
+         appCateforiesSection = presenter?.lastSection
         navigationController?.navigationBar.prefersLargeTitles = true
 
         title = "Apps"

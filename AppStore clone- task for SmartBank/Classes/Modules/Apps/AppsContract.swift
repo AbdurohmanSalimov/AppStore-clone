@@ -15,7 +15,7 @@ protocol PresenterToViewAppsProtocol: AnyObject {
     func  createUIElements()
     func handleViewWillAppear()
     func handleViewWillDisappear()
-    
+    func updateUI()
    
 }
 
@@ -26,13 +26,22 @@ protocol ViewToPresenterAppsProtocol: AnyObject {
     var view: PresenterToViewAppsProtocol? { get set }
     var interactor: PresenterToInteractorAppsProtocol? { get set }
     var router: PresenterToRouterAppsProtocol? { get set }
-    
+    var feturedDataResponse: [Section]? { get set }
+    var appsDataResponse: [Section]? { get set }
+    var appCategories: [AppCategories]? {get set}
+    var lastSection: Int? {get set}
     func viewDidLoad()
     func viewWillAppear()
     func viewWillDisappear()
     
-    var feturedDataResponse: [Section] { get set }
-    var appsDataResponse: [Section] { get set }
+    func didSelectItem(at: IndexPath)
+    func getTotalNumberOfSection() -> Int
+    func getFeaturedCategoryNumberOfItems() -> Int
+    func getAppCategoryNumberOfItems() -> Int
+    func getAppNumberOfItems(atSection: Int) -> Int
+    func seeAll(at: IndexPath)
+    func refresh()
+
 }
 
 
@@ -40,12 +49,19 @@ protocol ViewToPresenterAppsProtocol: AnyObject {
 protocol PresenterToInteractorAppsProtocol: AnyObject {
     
     var presenter: InteractorToPresenterAppsProtocol? { get set }
+    var feturedDataResponse: [Section]? { get set }
+    var appsDataResponse: [Section]? { get set }
+    var appCategories: [AppCategories]? {get set}
+    var isDataAllCame: Bool? { get set }
+    func getAppStoreDataFromServer()
+ 
 }
 
 
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterAppsProtocol: AnyObject {
-    
+    func succesInGetingData(featuredApps: [Section], apps: [Section], appCategories: [AppCategories])
+    func failureInGettingData()
 }
 
 

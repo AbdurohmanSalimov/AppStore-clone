@@ -9,15 +9,15 @@ import UIKit
 
 class FeaturedCVC: UICollectionViewCell, ClassIdentifiable {
     
-    let containerView = UIView()
-    let titleLbl = UILabel()
-    let mainNameLbl = UILabel()
-    let subtitleLbl = UILabel()
-    let mainImage = UIImageView()
-    let secondaryNameLbl = UILabel()
-    let categoryLbl = UILabel()
-    let btn = UIButton()
-    let secondaryImage = UIImageView()
+    
+
+    
+    private(set) lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        
+        return view
+    }()
     
     private(set) lazy var lineView: UIView = {
         let view = UIView()
@@ -26,9 +26,74 @@ class FeaturedCVC: UICollectionViewCell, ClassIdentifiable {
         return view
     }()
     
+    private lazy var mainImage: UIImageView = {
+        let mainImage = UIImageView()
+        mainImage.clipsToBounds = true
+        mainImage.layer.cornerRadius = 6
+        mainImage.backgroundColor = .systemGray3
+        mainImage.contentMode = .scaleAspectFill
+        
+        return mainImage
+    }()
+    
+    private lazy var btn: UIButton = {
+        let btn = UIButton()
+        btn.tintColor = .white
+        btn.backgroundColor = .systemGray3.withAlphaComponent(0.3)
+        btn.clipsToBounds = true
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+
+        return btn
+    }()
+    
+    private lazy var titleLbl: UILabel = {
+        let titleLbl = UILabel()
+        titleLbl.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        titleLbl.textColor = .systemBlue
+        return titleLbl
+    }()
+    
+    private lazy var mainNameLbl: UILabel = {
+        let mainNameLbl = UILabel()
+        mainNameLbl.font = UIFont.preferredFont(forTextStyle: .title2)
+        mainNameLbl.textColor = .label
+        return mainNameLbl
+    }()
+    
+    private lazy var subtitleLbl: UILabel = {
+        let subtitleLbl = UILabel()
+        subtitleLbl.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLbl.textColor = .secondaryLabel
+        
+        return subtitleLbl
+    }()
+    
+    private lazy var secondaryImage: UIImageView = {
+        let secondaryImage = UIImageView()
+        secondaryImage.contentMode = .scaleAspectFill
+        secondaryImage.layer.cornerRadius = 12
+        secondaryImage.clipsToBounds = true
+        secondaryImage.backgroundColor = .systemBackground
+        
+        return secondaryImage
+    }()
+    private lazy var secondaryNameLbl: UILabel = {
+        let secondaryNameLbl = UILabel()
+        secondaryNameLbl.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        secondaryNameLbl.textColor = .white
+        
+        return secondaryNameLbl
+    }()
+    
+    private lazy var categoryLbl: UILabel = {
+        let categoryLbl = UILabel()
+        categoryLbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        categoryLbl.textColor = .white
+        return categoryLbl
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUIElements()
         setupSubviews()
     }
     
@@ -67,38 +132,6 @@ class FeaturedCVC: UICollectionViewCell, ClassIdentifiable {
 
 extension FeaturedCVC {
     
-    func setupUIElements() {
-        titleLbl.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        titleLbl.textColor = .systemBlue
-        
-        mainNameLbl.font = UIFont.preferredFont(forTextStyle: .title2)
-        mainNameLbl.textColor = .label
-        
-        subtitleLbl.font = UIFont.preferredFont(forTextStyle: .title3)
-        subtitleLbl.textColor = .secondaryLabel
-        
-        mainImage.clipsToBounds = true
-        mainImage.layer.cornerRadius = 6
-        mainImage.backgroundColor = .systemGray3
-        mainImage.contentMode = .scaleAspectFill
-        
-        secondaryImage.contentMode = .scaleAspectFill
-        secondaryImage.layer.cornerRadius = 12
-        secondaryImage.clipsToBounds = true
-        secondaryImage.backgroundColor = .systemBackground
-        
-        secondaryNameLbl.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        secondaryNameLbl.textColor = .white
-        
-        categoryLbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
-        categoryLbl.textColor = .white
-        
-        btn.tintColor = .white
-        btn.backgroundColor = .systemGray3.withAlphaComponent(0.3)
-        btn.clipsToBounds = true
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        
-    }
     
     func setupSubviews() {
         contentView.addSubview(containerView)
@@ -162,7 +195,7 @@ extension FeaturedCVC {
         }
         
         btn.snp.makeConstraints { make in
-            make.right.equalTo(mainImage.snp.right).inset(14)
+            make.right.equalTo(mainImage.snp.right).inset(8)
             make.centerY.equalTo(secondaryImage.snp.centerY)
             make.height.equalTo(30)
             make.width.equalTo(80)

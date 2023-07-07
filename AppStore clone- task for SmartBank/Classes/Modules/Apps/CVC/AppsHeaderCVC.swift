@@ -25,12 +25,14 @@ class AppsReusableHeaderView: UICollectionReusableView, ClassIdentifiable {
     }()
     
     lazy var seeMoreButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("See All", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
-        button.addTarget(self, action: #selector(handleLearnMore), for: .touchUpInside)
-        return button
+        let btn = UIButton(type: .system)
+        btn.tintColor = .white
+        btn.setTitle("See All", for: .normal)
+        btn.setTitleColor(.systemBlue, for: .normal)
+        btn.clipsToBounds = true
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        btn.addTarget(self, action: #selector(handleLearnMore), for: .touchUpInside)
+        return btn
     }()
     
     var seeMoreTapped: (() -> Void)?
@@ -47,9 +49,8 @@ class AppsReusableHeaderView: UICollectionReusableView, ClassIdentifiable {
         fatalError()
     }
     
-    func configure(title: String, withButton: Bool) {
+    func configure(title: String) {
         label.text = title
-        seeMoreButton.isHidden = !withButton
     }
     
     @objc func handleLearnMore() {

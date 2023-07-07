@@ -28,7 +28,7 @@
 		082B937D2A578439006002E3 /* UITableView+ ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B937C2A578439006002E3 /* UITableView+ ClassIdentifiable.swift */; };
 		082B937F2A57845A006002E3 /* UICollection+ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B937E2A57845A006002E3 /* UICollection+ClassIdentifiable.swift */; };
 		082B93812A579992006002E3 /* AppsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93802A579992006002E3 /* AppsCVC.swift */; };
-		082B93832A57CE43006002E3 /* TopCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93822A57CE43006002E3 /* TopCVC.swift */; };
+		082B93832A57CE43006002E3 /* TopCategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */; };
 		082B93852A57CEEB006002E3 /* AppsHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */; };
 		E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		082B937C2A578439006002E3 /* UITableView+ ClassIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ ClassIdentifiable.swift"; sourceTree = "<group>"; };
 		082B937E2A57845A006002E3 /* UICollection+ClassIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollection+ClassIdentifiable.swift"; sourceTree = "<group>"; };
 		082B93802A579992006002E3 /* AppsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCVC.swift; sourceTree = "<group>"; };
-		082B93822A57CE43006002E3 /* TopCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCVC.swift; sourceTree = "<group>"; };
+		082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesCVC.swift; sourceTree = "<group>"; };
 		082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCVC.swift; sourceTree = "<group>"; };
 		3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_clone__task_for_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		082B93722A570BF5006002E3 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
-				082B93822A57CE43006002E3 /* TopCVC.swift */,
+				082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */,
 				082B93732A570C0E006002E3 /* FeaturedCVC.swift */,
 				082B93802A579992006002E3 /* AppsCVC.swift */,
 				082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */,
@@ -371,7 +371,7 @@
 				082B93812A579992006002E3 /* AppsCVC.swift in Sources */,
 				082B935D2A56D738006002E3 /* SearchVC.swift in Sources */,
 				082B93672A56DF34006002E3 /* AppsInteractor.swift in Sources */,
-				082B93832A57CE43006002E3 /* TopCVC.swift in Sources */,
+				082B93832A57CE43006002E3 /* TopCategoriesCVC.swift in Sources */,
 				082B93632A56DF34006002E3 /* AppsContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,12 +512,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZD8K8G439;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppStore clone- task for SmartBank/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,12 +544,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZD8K8G439;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppStore clone- task for SmartBank/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

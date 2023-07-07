@@ -24,4 +24,7 @@ struct Section {
     let apps: [App]
 }
 
-
+struct AppCategories {
+    let name: String?
+    let bannerImage: UIImage?
+}
