@@ -31,7 +31,7 @@ class AppsCVC: UICollectionViewCell, ClassIdentifiable {
         image.layer.cornerRadius = 12
         image.layer.borderWidth = 0.35
         image.layer.borderColor = UIColor.systemGray2.withAlphaComponent(0.95).cgColor
-        image.layer.backgroundColor = UIColor.systemBackground.cgColor
+        image.layer.backgroundColor = UIColor.white.cgColor
         image.clipsToBounds = true
         image.contentMode = .scaleAspectFit
         

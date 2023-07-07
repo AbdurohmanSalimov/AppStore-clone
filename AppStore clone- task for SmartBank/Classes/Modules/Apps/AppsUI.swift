@@ -23,9 +23,10 @@ extension AppsViewController {
         collectionView.register(cellType: FeaturedCVC.self)
         collectionView.register(cellType: AppsCVC.self)
         collectionView.register(cellType: TopCategoriesCVC.self)
+        collectionView.register(cellType: QuickLinksCVC.self)
         
         collectionView.registerView(ofKind: .header, viewType: AppsReusableHeaderView.self)
-//        collectionView.registerView(ofKind: .header, viewType: TopReusableHeaderView.self)
+
         
         return collectionView
     }
@@ -59,6 +60,9 @@ extension AppsViewController {
             case 0:
                 return self?.createFeaturedLayout()
                 
+            case ((self?.appCateforiesSection ?? 0) - 1):
+                return self?.createAppsCollectionLayout()
+            
             case self?.appCateforiesSection:
                 return self?.createAppsCollectionLayout()
             
@@ -166,11 +170,11 @@ extension AppsViewController {
      
     private struct Const {
         /// Image height/width for Large NavBar state
-        static let ImageSizeForLargeState: CGFloat = 48
+        static let ImageSizeForLargeState: CGFloat = 60
         /// Margin from right anchor of safe area to right anchor of Image
         static let ImageRightMargin: CGFloat = 26
         /// Margin from bottom anchor of NavBar to bottom anchor of Image for Large NavBar state
-        static let ImageBottomMarginForLargeState: CGFloat = 12
+        static let ImageBottomMarginForLargeState: CGFloat = 0
         /// Margin from bottom anchor of NavBar to bottom anchor of Image for Small NavBar state
         static let ImageBottomMarginForSmallState: CGFloat = 6
         /// Image height/width for Small NavBar state
@@ -178,7 +182,7 @@ extension AppsViewController {
         /// Height of NavBar for Small state. Usually it's just 44
         static let NavBarHeightSmallState: CGFloat = 44
         /// Height of NavBar for Large state. Usually it's just 96.5 but if you have a custom font for the title, please make sure to edit this value since it changes the height for Large state of NavBar
-        static let NavBarHeightLargeState: CGFloat = 96.5
+        static let NavBarHeightLargeState: CGFloat = 120
     }
      func setupUI() {
          appCateforiesSection = presenter?.lastSection

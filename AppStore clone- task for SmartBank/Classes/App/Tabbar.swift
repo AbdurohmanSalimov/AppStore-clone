@@ -12,17 +12,25 @@ class TabBar: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+       
         setupVCs()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if traitCollection.userInterfaceStyle == .light {
+              print("Light mode")
+            UserDefaults.standard.set(true, forKey: "isLight")
+          } else {
+              print("Dark mode")
+              UserDefaults.standard.set(false, forKey: "isLight")
+              
+          }
     }
     
     override func viewDidLayoutSubviews() {
         UITabBar.appearance().barTintColor = .systemBackground
         UITabBar.appearance().tintColor = .systemBlue
-        UITabBar.appearance().layer.borderColor = #colorLiteral(red: 0.7913870215, green: 0.7771956921, blue: 0.753970027, alpha: 1).cgColor
-        UITabBar.appearance().layer.borderWidth = 1
-        
-        tabBar.layer.borderColor = #colorLiteral(red: 0.7913870215, green: 0.7771956921, blue: 0.753970027, alpha: 1).cgColor
-        tabBar.layer.borderWidth = 1
+
         tabBar.backgroundColor = UIColor.systemBackground
         tabBar.clipsToBounds = false
         tabBar.tintColor = .systemBlue

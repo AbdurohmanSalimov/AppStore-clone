@@ -30,6 +30,7 @@
 		082B93812A579992006002E3 /* AppsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93802A579992006002E3 /* AppsCVC.swift */; };
 		082B93832A57CE43006002E3 /* TopCategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */; };
 		082B93852A57CEEB006002E3 /* AppsHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */; };
+		082B93892A586256006002E3 /* QuickLinksCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B93882A586256006002E3 /* QuickLinksCVC.swift */; };
 		E77232CDBF7880B1B95AF4FD /* Pods_AppStore_clone__task_for_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		082B93802A579992006002E3 /* AppsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCVC.swift; sourceTree = "<group>"; };
 		082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesCVC.swift; sourceTree = "<group>"; };
 		082B93842A57CEEB006002E3 /* AppsHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCVC.swift; sourceTree = "<group>"; };
+		082B93882A586256006002E3 /* QuickLinksCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLinksCVC.swift; sourceTree = "<group>"; };
 		3C50C1AFC40B4A919447D37F /* Pods_AppStore_clone__task_for_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_clone__task_for_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F237542A51A5D7D762CBBEA /* Pods-AppStore clone- task for SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore clone- task for SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-AppStore clone- task for SmartBank/Pods-AppStore clone- task for SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 		082B93722A570BF5006002E3 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
+				082B93882A586256006002E3 /* QuickLinksCVC.swift */,
 				082B93822A57CE43006002E3 /* TopCategoriesCVC.swift */,
 				082B93732A570C0E006002E3 /* FeaturedCVC.swift */,
 				082B93802A579992006002E3 /* AppsCVC.swift */,
@@ -366,6 +369,7 @@
 				082B937F2A57845A006002E3 /* UICollection+ClassIdentifiable.swift in Sources */,
 				082B93742A570C0E006002E3 /* FeaturedCVC.swift in Sources */,
 				082B937D2A578439006002E3 /* UITableView+ ClassIdentifiable.swift in Sources */,
+				082B93892A586256006002E3 /* QuickLinksCVC.swift in Sources */,
 				082B935B2A56D72C006002E3 /* ArcadeVC.swift in Sources */,
 				082B93532A56D370006002E3 /* Tabbar.swift in Sources */,
 				082B93812A579992006002E3 /* AppsCVC.swift in Sources */,

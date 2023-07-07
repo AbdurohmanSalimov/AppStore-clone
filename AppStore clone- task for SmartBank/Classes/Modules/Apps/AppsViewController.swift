@@ -15,12 +15,18 @@ class AppsViewController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
         presenter?.viewDidLoad()
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.viewWillAppear()
-        
+        let isLight =  UserDefaults.standard.bool(forKey: "isLight")
+       if isLight {
+           self.overrideUserInterfaceStyle = .light
+       } else {
+           self.overrideUserInterfaceStyle = .dark
+       }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,7 +87,6 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
             guard let height = navigationController?.navigationBar.frame.height else { return }
             moveAndResizeImage(for: height)
-        print("🦷 App categories sections",presenter?.getTotalNumberOfSection())
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -94,9 +99,12 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 0:
             return presenter?.getFeaturedCategoryNumberOfItems() ?? 0
             
-        case appCateforiesSection:
-            print("🦷 number of items",appCateforiesSection)
+        case (appCateforiesSection! - 1):
             return presenter?.getAppCategoryNumberOfItems() ?? 0
+            
+        case (appCateforiesSection):
+            return presenter?.getQucikListNumberOfItems() ?? 0
+            
         default:
             return presenter?.getAppNumberOfItems(atSection: section) ?? 0
         }
@@ -110,7 +118,7 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             return cell
             
-        case appCateforiesSection:
+        case appCateforiesSection! - 1:
             print("🦷 case celll for item",appCateforiesSection)
             let cell = collectionView.dequeueReusableCell(withCellType: TopCategoriesCVC.self, for: indexPath)
             if let dataSafe = presenter?.appCategories?[indexPath.row] {
@@ -119,6 +127,14 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
             return cell
         
+        case appCateforiesSection:
+            print("🦷 case celll for item",appCateforiesSection)
+            let cell = collectionView.dequeueReusableCell(withCellType: QuickLinksCVC.self, for: indexPath)
+            if let dataSafe = presenter?.qucikList?[indexPath.row] {
+            cell.configure(data: dataSafe)
+            }
+
+            return cell
         default:
             let cell = collectionView.dequeueReusableCell(withCellType: AppsCVC.self, for: indexPath)
             if let dataSafe = presenter?.appsDataResponse?[indexPath.section - 1].apps[indexPath.row] {
@@ -146,8 +162,7 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 }
                 return header
                 
-            case appCateforiesSection:
-                print("🦷 header suplimentory-",appCateforiesSection)
+            case appCateforiesSection! - 1:
                 let header = collectionView.dequeueReusableView(ofKind: .header,
                                                                 withViewType: AppsReusableHeaderView.self,
                                                                 for:indexPath)
@@ -156,6 +171,18 @@ extension AppsViewController: UICollectionViewDelegate, UICollectionViewDataSour
                     self?.presenter?.seeAll(at: indexPath)
                 }
                 return header
+                
+            case appCateforiesSection:
+                print("🦷 header suplimentory-",appCateforiesSection)
+                let header = collectionView.dequeueReusableView(ofKind: .header,
+                                                                withViewType: AppsReusableHeaderView.self,
+                                                                for:indexPath)
+                header.label.text = "Quick List"
+                header.seeMoreTapped = { [weak self] in
+                    self?.presenter?.seeAll(at: indexPath)
+                }
+                return header
+                
             default:
                 let header = collectionView.dequeueReusableView(ofKind: .header,
                                                                 withViewType: AppsReusableHeaderView.self,

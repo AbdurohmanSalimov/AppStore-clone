@@ -73,7 +73,7 @@ class FeaturedCVC: UICollectionViewCell, ClassIdentifiable {
         secondaryImage.contentMode = .scaleAspectFill
         secondaryImage.layer.cornerRadius = 12
         secondaryImage.clipsToBounds = true
-        secondaryImage.backgroundColor = .systemBackground
+        secondaryImage.backgroundColor = .white
         
         return secondaryImage
     }()
@@ -134,6 +134,7 @@ extension FeaturedCVC {
     
     
     func setupSubviews() {
+        containerView.backgroundColor = .clear
         contentView.addSubview(containerView)
         containerView.addSubview(lineView)
         containerView.addSubview(titleLbl)

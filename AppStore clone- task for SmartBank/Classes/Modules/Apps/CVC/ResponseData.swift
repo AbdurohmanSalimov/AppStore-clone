@@ -263,4 +263,21 @@ class Network {
         ]
         return appCategories
     }
+    
+    func getQuickLinksesponseData() -> [String]? {
+        let appCategories: [String] = [
+            "About the App Stroe",
+            "Report a Problem",
+            "About Apps & Games For Your kids",
+            "Discover more Russian Apps",
+            "About In - App Purchases",
+            "About family Sharing",
+            "Manage your subscription",
+            "Apps with VoiceOver",
+            "Request Refund",
+            "Change Your Payment Method",
+            "About Personalisation"
+        ]
+        return appCategories
+    }
 }

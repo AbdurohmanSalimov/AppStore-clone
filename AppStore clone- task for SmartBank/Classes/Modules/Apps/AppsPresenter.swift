@@ -8,7 +8,7 @@
 import Foundation
 
 class AppsPresenter: ViewToPresenterAppsProtocol {
-    
+
     
     // MARK: Properties
     weak var view: PresenterToViewAppsProtocol?
@@ -17,6 +17,7 @@ class AppsPresenter: ViewToPresenterAppsProtocol {
     var feturedDataResponse: [Section]?
     var appsDataResponse: [Section]?
     var appCategories: [AppCategories]?
+    var qucikList: [String]?
     var lastSection: Int?
     
     // MARK: Inputs from view
@@ -45,7 +46,7 @@ class AppsPresenter: ViewToPresenterAppsProtocol {
     }
     
     func getTotalNumberOfSection() -> Int {
-        var sections: Int = (appsDataResponse?.count ?? 0) + 2
+        var sections: Int = (appsDataResponse?.count ?? 0) + 3
         print("🥶 sections-",sections)
         lastSection = sections
         return sections
@@ -68,6 +69,12 @@ class AppsPresenter: ViewToPresenterAppsProtocol {
         return items
     }
     
+    func getQucikListNumberOfItems() -> Int {
+        let items: Int = qucikList?.count ?? 0
+        
+        return items
+    }
+    
     
     func refresh() {
             self.interactor?.getAppStoreDataFromServer()
@@ -76,10 +83,11 @@ class AppsPresenter: ViewToPresenterAppsProtocol {
 
 // MARK: - Outputs to view
 extension AppsPresenter: InteractorToPresenterAppsProtocol {
-    func succesInGetingData(featuredApps: [Section], apps: [Section], appCategories: [AppCategories]) {
+    func succesInGetingData(featuredApps: [Section], apps: [Section], appCategories: [AppCategories], quickList: [String]) {
         self.appCategories = appCategories
         self.feturedDataResponse = featuredApps
         self.appsDataResponse = apps
+        self.qucikList = quickList
         print(" ☪️☪️☪️☪️☪️☪️ count-",apps.count)
         view?.updateUI()
         
